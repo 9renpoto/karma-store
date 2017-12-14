@@ -90,9 +90,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/redis@^2.8.2":
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/@types/redis/-/redis-2.8.2.tgz#a5943a6dfbaeb59fe96bb044b31d4f7c5e961ce6"
+"@types/redis@^2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@types/redis/-/redis-2.8.3.tgz#773bb60690c6f85eafa96d6c92cdee5f0695f97d"
   dependencies:
     "@types/events" "*"
     "@types/node" "*"
