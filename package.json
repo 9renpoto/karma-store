@@ -51,7 +51,11 @@
   "lint-staged": {
     "*.ts": [
       "prettier-eslint --parser typescript --write",
-      "eslint --fix",
+      "eslint --ext=ts",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --parser markdown --write",
       "git add"
     ]
   },
@@ -63,7 +67,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib coverage .nyc_output",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov -t $CODECOV_TOKEN",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint . --cache --ext=ts",
     "prebuild": "npm run clean",
     "precommit": "lint-staged",
