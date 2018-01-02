@@ -2,7 +2,7 @@ import { createClient, RedisClient } from 'redis'
 import { random } from 'lodash'
 import Raven from 'raven'
 import { CronJob } from 'cron'
-import moment from 'moment'
+import * as moment from 'moment'
 
 import { RAVEN_DSN, REDIS_URL, TIMEZONE, INTERVAL } from './const'
 
