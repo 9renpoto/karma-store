@@ -36,7 +36,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.2",
     "source-map-support": "^0.5.3",
-    "ts-node": "^4.0.1",
+    "ts-node": "^5.0.0",
     "typescript": "^2.7.2",
     "typescript-eslint-parser": "^14.0.0"
   },
