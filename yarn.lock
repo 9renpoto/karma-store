@@ -152,9 +152,10 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@types/redis@2.8.7":
-  version "2.8.7"
-  resolved "https://registry.yarnpkg.com/@types/redis/-/redis-2.8.7.tgz#e0825093fb1af9d5b4a7246c6d7d1163cc842c35"
+"@types/redis@2.8.8":
+  version "2.8.8"
+  resolved "https://registry.yarnpkg.com/@types/redis/-/redis-2.8.8.tgz#70855e79a6020080cca3cb5f1f5ee7f11b49a979"
+  integrity sha512-o/1ufNVPA92uum9HFbEiXXIHBuLywSwHQtAZoACMc1FhPXS5YftybBC1EI0zjdbUb273VVWF0Ivll/bq4g+gyw==
   dependencies:
     "@types/node" "*"
 
@@ -722,7 +723,7 @@ contains-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/contains-path/-/contains-path-0.1.0.tgz#fe8cf184ff6670b6baef01a9d4861a5cbec4120a"
 
-convert-source-map@^1.1.0, convert-source-map@^1.1.1:
+convert-source-map@^1.1.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.0.tgz#9acd70851c6d5dfdd93d9282e5edf94a03ff46b5"
 
@@ -756,9 +757,10 @@ cosmiconfig@^5.0.2, cosmiconfig@^5.0.6:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-cron@^1.3.0:
+cron@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/cron/-/cron-1.3.0.tgz#7e459968eaf94e1a445be796ce402166c234659d"
+  integrity sha512-K/SF7JlgMmNjcThWxkKvsHhey2EDB4CeOEWJ9aXWj3fbQJppsvTPIeyLdHfNq5IbbsMUUjRW1nr5dSO95f2E4w==
   dependencies:
     moment-timezone "^0.5.x"
 
@@ -1079,7 +1081,19 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-escodegen@^1.6.1, escodegen@^1.7.0:
+escodegen@^1.10.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/escodegen/-/escodegen-1.11.0.tgz#b27a9389481d5bfd5bec76f7bb1eb3f8f4556589"
+  integrity sha512-IeMV45ReixHS53K/OmfKAIztN/igDHzTJUhZM3k1jMhIZWjk45SMwAtBsEXiJp3vSPmTcu6CXn7mDvFHRN66fw==
+  dependencies:
+    esprima "^3.1.3"
+    estraverse "^4.2.0"
+    esutils "^2.0.2"
+    optionator "^0.8.1"
+  optionalDependencies:
+    source-map "~0.6.1"
+
+escodegen@^1.7.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/escodegen/-/escodegen-1.9.0.tgz#9811a2f265dc1cd3894420ee3717064b632b8852"
   dependencies:
@@ -1307,16 +1321,6 @@ eslint@^4.5.0:
     table "^4.0.1"
     text-table "~0.2.0"
 
-espower-loader@^1.0.0:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/espower-loader/-/espower-loader-1.2.2.tgz#edb46c3c59a06bac8ea73a695c86e5c5a0bc82da"
-  dependencies:
-    convert-source-map "^1.1.0"
-    espower-source "^2.0.0"
-    minimatch "^3.0.0"
-    source-map-support "^0.4.0"
-    xtend "^4.0.0"
-
 espower-location-detector@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/espower-location-detector/-/espower-location-detector-1.0.0.tgz#a17b7ecc59d30e179e2bef73fb4137704cb331b5"
@@ -1326,25 +1330,37 @@ espower-location-detector@^1.0.0:
     source-map "^0.5.0"
     xtend "^4.0.0"
 
-espower-source@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/espower-source/-/espower-source-2.2.0.tgz#7e005255ae47b5c136448644b3f3d802d503f752"
+espower-source@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/espower-source/-/espower-source-2.3.0.tgz#43e93b2c18af50018bdb1bea7a1271f4a1c125f4"
+  integrity sha512-Wc4kC4zUAEV7Qt31JRPoBUc5jjowHRylml2L2VaDQ1XEbnqQofGWx+gPR03TZAPokAMl5dqyL36h3ITyMXy3iA==
   dependencies:
     acorn "^5.0.0"
     acorn-es7-plugin "^1.0.10"
     convert-source-map "^1.1.1"
     empower-assert "^1.0.0"
-    escodegen "^1.6.1"
-    espower "^2.0.0"
+    escodegen "^1.10.0"
+    espower "^2.1.1"
     estraverse "^4.0.0"
     merge-estraverse-visitors "^1.0.0"
     multi-stage-sourcemap "^0.2.1"
     path-is-absolute "^1.0.0"
     xtend "^4.0.0"
 
-espower@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/espower/-/espower-2.1.0.tgz#ce1edb3d98702841fdf596d1cb8e85bdc4ae8e48"
+espower-typescript@9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/espower-typescript/-/espower-typescript-9.0.1.tgz#536140750f8509f4bdc5db7461c0bf60052c0658"
+  integrity sha512-WmEm8Hs0SX06izEdi4Qlu3GPOgshejXXA22OA5i+9oN0yC9pWLxlomyPkNkksAQl+ZV5dOGyTdC4gBAEfwqBww==
+  dependencies:
+    espower-source "^2.3.0"
+    minimatch "^3.0.3"
+    source-map-support "^0.5.9"
+    ts-node "^7.0.1"
+
+espower@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/espower/-/espower-2.1.1.tgz#158c91585528db46c0eb5a731c2136a427ad2857"
+  integrity sha512-F4TY1qYJB1aUyzB03NsZksZzUQmQoEBaTUjRJGR30GxbkbjKI41NhCyYjrF+bGgWN7x/ZsczYppRpz/0WdI0ug==
   dependencies:
     array-find "^1.0.0"
     escallmatch "^1.5.0"
@@ -1982,12 +1998,6 @@ inquirer@^6.1.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-intelli-espower-loader@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/intelli-espower-loader/-/intelli-espower-loader-1.0.1.tgz#2c7b03146bc1d46bf210d0a0397c5c91ab4ca2b0"
-  dependencies:
-    espower-loader "^1.0.0"
-
 invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
@@ -2424,7 +2434,6 @@ listr-silent-renderer@^1.1.1:
 
 listr-update-renderer@^0.4.0, "listr-update-renderer@https://github.com/okonet/listr-update-renderer/tarball/upgrade-log-update":
   version "0.4.0"
-  uid "06073fa93166277607a7814f4e1f83960081414c"
   resolved "https://github.com/okonet/listr-update-renderer/tarball/upgrade-log-update#06073fa93166277607a7814f4e1f83960081414c"
   dependencies:
     chalk "^1.1.3"
@@ -2507,6 +2516,11 @@ lodash.unescape@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.unescape/-/lodash.unescape-4.0.1.tgz#bf2249886ce514cda112fae9218cdc065211fc9c"
 
+lodash@4.17.5, lodash@^4.17.5:
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+  integrity sha512-svL3uiZf1RwhH+cWrfZn3A4+U58wbP0tGVTLQPbjplZxZ8ROD9VLuNgsRniTlLe7OlSqR79RUehXgpBW/s0IQw==
+
 lodash@^4.0.0, lodash@^4.17.4, lodash@^4.3.0:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
@@ -2514,10 +2528,6 @@ lodash@^4.0.0, lodash@^4.17.4, lodash@^4.3.0:
 lodash@^4.17.10, lodash@^4.17.11:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
-
-lodash@^4.17.5:
-  version "4.17.5"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
 log-symbols@^1.0.2:
   version "1.0.2"
@@ -2691,7 +2701,7 @@ minimatch@3.0.4, minimatch@^3.0.3, minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^3.0.0, minimatch@^3.0.2:
+minimatch@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
   dependencies:
@@ -2744,9 +2754,10 @@ moment@*, "moment@>= 2.6.0":
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
-moment@^2.19.4:
+moment@2.19.4:
   version "2.19.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.4.tgz#17e5e2c6ead8819c8ecfad83a0acccb312e94682"
+  integrity sha512-1xFTAknSLfc47DIxHDUbnJWC+UwgWxATmymaxIPQpmMh7LBm7ZbwVEsuushqwL2GYZU0jie4xO+TK44hJPjNSQ==
 
 ms@0.7.2:
   version "0.7.2"
@@ -3281,9 +3292,10 @@ quick-lru@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.0.0.tgz#7fa80304ab72c1f81cef738739cd47d7cc0c8bff"
 
-raven@^2.4.1:
+raven@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/raven/-/raven-2.4.1.tgz#7a6a6ff1c42d0a3892308f44c94273e7f88677fd"
+  integrity sha512-LLLS8bOJC1q33qszBsLaEtEg7X8G8hYLGcKO4s6EifAce2BN6cTRdBXNvwVNv4kNk82YUZYrj53yEbL4kCmjjw==
   dependencies:
     cookie "0.3.1"
     md5 "^2.2.1"
@@ -3349,9 +3361,10 @@ redis-parser@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/redis-parser/-/redis-parser-2.6.0.tgz#52ed09dacac108f1a631c07e9b69941e7a19504b"
 
-redis@^2.8.0:
+redis@2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/redis/-/redis-2.8.0.tgz#202288e3f58c49f6079d97af7a10e1303ae14b02"
+  integrity sha512-M1OkonEQwtRmZv4tEWF2VgpG0JWJ8Fv1PhlgT5+B+uNq2cA3Rt1Yt/ryoR+vQNOQcIEgdCdfH0jr3bDpihAw1A==
   dependencies:
     double-ended-queue "^2.1.0-0"
     redis-commands "^1.2.0"
@@ -3661,18 +3674,12 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@0.5.9, source-map-support@^0.5.6:
+source-map-support@^0.5.6, source-map-support@^0.5.9:
   version "0.5.9"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.9.tgz#41bc953b2534267ea2d605bccfa7bfa3111ced5f"
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
-
-source-map-support@^0.4.0:
-  version "0.4.18"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
-  dependencies:
-    source-map "^0.5.6"
 
 source-map-url@^0.4.0:
   version "0.4.0"
@@ -3971,7 +3978,7 @@ tryit@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
-ts-node@7.0.1:
+ts-node@7.0.1, ts-node@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-7.0.1.tgz#9562dc2d1e6d248d24bc55f773e3f614337d9baf"
   dependencies:
@@ -4012,9 +4019,10 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-eslint-parser@21.0.0:
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-21.0.0.tgz#fcac9e07f83330c7d8e6902bdae0bfdcdbea6995"
+typescript-eslint-parser@21.0.1:
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-21.0.1.tgz#710ea628a72144e1ec3a1d6b9f5b2b0a5a520e04"
+  integrity sha512-rdtAzg0eTTv/+YRLBJZBAAuOHHyYiElE2HdkaOGf9kKGce811zP3JRPzDybCJQamdsxyEsMe6CyIk2JCEnw/4g==
   dependencies:
     eslint-scope "^4.0.0"
     eslint-visitor-keys "^1.0.0"
