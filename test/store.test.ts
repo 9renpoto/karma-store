@@ -8,10 +8,10 @@ describe('Store', () => {
   beforeEach(() => {
     s = new Store(random.alphaNumeric(30))
   })
-  afterEach(done => {
+
+  afterEach(() => {
     s.clearAll(s._key())
     s.quit()
-    done()
   })
 
   it('after clear', done =>
@@ -44,7 +44,7 @@ describe('Store', () => {
     })
 
     s.top(-1, (err, rank) => {
-      assert(rank.length === 4)
+      assert(rank.length === 2)
       assert(err === null)
       const max = parseInt(rank[1], 10)
       for (let i = 0; i < rank.length; i += 2) {
@@ -54,7 +54,7 @@ describe('Store', () => {
     })
 
     s.lowest(-1, (err, rank) => {
-      assert(rank.length === 4)
+      assert(rank.length === 2)
       assert(err === null)
       const min = parseInt(rank[1], 10)
       for (let i = 0; i < rank.length; i += 2) {

@@ -1,6 +1,6 @@
 import { createClient, RedisClient, Callback } from 'redis'
 import { random } from 'lodash'
-import Raven from 'raven'
+import Sentry from '@sentry/node'
 import { CronJob } from 'cron'
 import * as moment from 'moment'
 import { RAVEN_DSN, REDIS_URL, TIMEZONE, INTERVAL } from './const'
@@ -12,7 +12,7 @@ export default class Karma {
     this._PREFIX = PREFIX
 
     if (RAVEN_DSN) {
-      Raven.config(RAVEN_DSN).install()
+      Sentry.init({ dsn: RAVEN_DSN, debug: process.env.NODE_ENV === 'test' })
     }
 
     this.client = createClient({ url: REDIS_URL })
@@ -56,7 +56,7 @@ export default class Karma {
   top (n: number, cb: Callback<string[]>) {
     this.client.zrevrange(this._key(), 0, n, 'WITHSCORES', (err, res) => {
       if (err) {
-        Raven.captureException(err)
+        Sentry.captureException(err)
       }
       cb(err, res)
     })
@@ -65,7 +65,7 @@ export default class Karma {
   lowest (n: number, cb: Callback<string[]>) {
     this.client.zrange(this._key(), 0, n, 'WITHSCORES', (err, res) => {
       if (err) {
-        Raven.captureException(err)
+        Sentry.captureException(err)
       }
       cb(err, res)
     })
@@ -74,7 +74,7 @@ export default class Karma {
   up (key: string, n: number, cb: Callback<string>): void {
     this.client.zincrby(this._key(), n, key, (err, res) => {
       if (err) {
-        Raven.captureException(err)
+        Sentry.captureException(err)
       }
       cb(err, res)
     })
